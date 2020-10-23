@@ -4,11 +4,11 @@ using System.Text;
 
 namespace DataStructuresDemo
 {
-    public class Node
+    public class Node<T>
     {
-        public int data;
-        public Node next;
-        public Node(int d)
+        public T data;
+        public Node<T> next;
+        public Node(T d)
         {
             data = d;
             next = null;
