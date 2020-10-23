@@ -7,11 +7,12 @@ namespace DataStructuresDemo
         static void Main(string[] args)
         {
             LinkedListclass linkedListclass = new LinkedListclass();
-            ///inserting at front
-            linkedListclass.InsertFront(70);
-            linkedListclass.InsertFront(30);
-            linkedListclass.InsertFront(56);
+            ///Inserting at last
+            linkedListclass.InsertLast(56);
+            linkedListclass.InsertLast(30);
+            linkedListclass.InsertLast(70);
             linkedListclass.Display();
+            
         }
     }
 }
