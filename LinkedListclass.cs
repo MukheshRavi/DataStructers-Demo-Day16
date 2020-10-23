@@ -8,7 +8,7 @@ namespace DataStructuresDemo
     {
         public Node head;
         /// <summary>
-        /// UC1
+        /// UC1 and UC3
         /// Inserts at last of link
         /// </summary>
         /// <param name="new_data">The new data.</param>
