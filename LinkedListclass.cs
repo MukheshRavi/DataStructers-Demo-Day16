@@ -81,6 +81,29 @@ namespace DataStructuresDemo
             return this.head;
         }
         /// <summary>
+        /// UC 6
+        /// Deletes the last node.
+        /// </summary>
+        /// <returns></returns>
+        public Node<T> DeleteLastNode()
+        {
+            Node<T> temp = this.head;
+            ///If no elements present then list is empty
+            if (temp== null)
+                return null;
+            ///If only single element present then delets the element
+            if (temp.next == null)
+            {
+                temp= null;
+                return null;
+            }
+            ///If more than one element present then iterates to last element and delete that
+            while (temp.next.next != null)
+                temp = temp.next;
+            temp.next = null;
+            return null;
+        }
+        /// <summary>
         /// This method displays full list
         /// </summary>
         public void Display()
@@ -95,9 +118,9 @@ namespace DataStructuresDemo
             else
             {
                 ///Iterates full list and displays data in each node
+                Console.WriteLine(" ");
                 while (temp != null)
                 {
-                    Console.WriteLine(" ");
                     Console.Write(" " + temp.data);
                     temp = temp.next;
                 }
