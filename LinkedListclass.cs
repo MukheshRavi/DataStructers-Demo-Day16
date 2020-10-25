@@ -55,18 +55,28 @@ namespace DataStructuresDemo
             Console.WriteLine("inserted into list " + new_node.data);
         }
         /// <summary>
-        /// This node inserts node in middle
+        /// This node inserts new node After a given node
+        /// The data of node is compared to get a specified position
         /// </summary>
         /// <param name="item"></param>
-        public void InsertInMiddle(T item)
+        public void InsertAfterElement(T value,T item)
         {
             ///Creating new node 
             Node<T> temp = this.head;
             Node<T> newNode = new Node<T>(item);
             ///Inserting in between by changing links
+            while (temp != null)
+            {
+                if (temp.data.Equals(value))
+                {
+                    Console.WriteLine("\nFound " + value);
+                    break;
+                }
+                temp = temp.next;
+               
+            }
             newNode.next = temp.next;
             temp.next = newNode;
-            head = temp;
         }
         /// <summary>
         /// UC 5
@@ -126,6 +136,11 @@ namespace DataStructuresDemo
                 }
             }
         }
+        /// <summary>
+        /// This method is used to search a given element
+        /// It returns the position of element if found 
+        /// Else returns 0
+        /// </summary>
         public int Search(T value)
         {
             int count = 1;
@@ -140,7 +155,7 @@ namespace DataStructuresDemo
                 temp = temp.next;
                 count++;
             }
-            return count;
+            return 0;
         }
     }
 }
