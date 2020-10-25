@@ -114,6 +114,27 @@ namespace DataStructuresDemo
             return null;
         }
         /// <summary>
+        /// Delete a particular node based on data present at node
+        /// </summary>
+        /// <param name="value"></param>
+        public void DeleteNode(T value)
+        {
+            Node<T> temp = this.head;
+            while (temp != null)
+            {
+                if (temp.next.data.Equals(value))
+                {
+                    Console.WriteLine("\nFound " + value+"to delete");
+                    break;
+                }
+                temp = temp.next;
+
+            }
+            ///changes the links
+            temp.next=temp.next.next;
+
+        }
+        /// <summary>
         /// This method displays full list
         /// </summary>
         public void Display()
@@ -156,6 +177,22 @@ namespace DataStructuresDemo
                 count++;
             }
             return 0;
+        }
+        /// <summary>
+        /// This method returns the size of linked list
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            Node<T> temp = this.head;
+            int count = 0;
+            while(temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+
         }
     }
 }
