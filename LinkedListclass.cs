@@ -39,6 +39,10 @@ namespace DataStructuresDemo
             ///next will be null for last node
             return temp;
         }
+        /// <summary>
+        /// This method inserts node at front of list
+        /// </summary>
+        /// <param name="new_data"></param>
         public void InsertFront(T new_data)
         {
             ///We will create a new node. The next of the new node will point to the head of the Linked list.
@@ -50,6 +54,10 @@ namespace DataStructuresDemo
 
             Console.WriteLine("inserted into list " + new_node.data);
         }
+        /// <summary>
+        /// This node inserts node in middle
+        /// </summary>
+        /// <param name="item"></param>
         public void InsertInMiddle(T item)
         {
             ///Creating new node 
@@ -59,6 +67,18 @@ namespace DataStructuresDemo
             newNode.next = temp.next;
             temp.next = newNode;
             head = temp;
+        }
+        /// <summary>
+        /// UC 5
+        /// Deletes the first node.
+        /// </summary>
+        /// <returns></returns>
+        public Node<T> DeleteFirstNode()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
         }
         /// <summary>
         /// This method displays full list
@@ -77,6 +97,7 @@ namespace DataStructuresDemo
                 ///Iterates full list and displays data in each node
                 while (temp != null)
                 {
+                    Console.WriteLine(" ");
                     Console.Write(" " + temp.data);
                     temp = temp.next;
                 }
