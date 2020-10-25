@@ -15,6 +15,9 @@ namespace DataStructuresDemo
             linkedListclass.Display();
             linkedListclass.DeleteLastNode();
             linkedListclass.Display();
+            int pos=linkedListclass.Search(30);
+            Console.WriteLine("Found at podition" + pos);
+            
             
         }
     }
