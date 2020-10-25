@@ -13,8 +13,6 @@ namespace DataStructuresDemo
             ///Inserting in middle
             linkedListclass.InsertInMiddle(30);
             linkedListclass.Display();
-            linkedListclass.DeleteLastNode();
-            linkedListclass.Display();
             int pos=linkedListclass.Search(30);
             Console.WriteLine("Found at podition" + pos);
             
