@@ -14,8 +14,12 @@ namespace DataStructuresDemo
             ///Inserting in middle
             linkedListclass.InsertAfterElement(30,40);
             linkedListclass.Display();
-            int pos=linkedListclass.Search(30);
-            Console.WriteLine("Found at podition" + pos);
+            linkedListclass.DeleteNode(40);
+            linkedListclass.Display();
+            int count = linkedListclass.Size();
+            Console.WriteLine("\nsize of list:"+count);
+
+            
             
             
         }

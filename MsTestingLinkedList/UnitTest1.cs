@@ -44,7 +44,21 @@ namespace MsTestingLinkedList
             int actualPosition=linkedListclass.Search(40);
             ///Assert
             Assert.AreEqual(expectedPosition, actualPosition);
-        } 
+        }
+        /// <summary>
+        /// This method tests for size of linked list
+        /// </summary>
+        [TestMethod]
+        public void TestToGetSize()
+        {
+            ///Arrange
+            int expectedSize = 3;
+            ///Act
+            int actualSize = linkedListclass.Size();
+            ///Assert
+            Assert.AreEqual(expectedSize, actualSize);
+        }
+
 
     }
 }
