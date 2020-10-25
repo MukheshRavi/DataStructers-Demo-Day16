@@ -13,7 +13,7 @@ namespace DataStructuresDemo
             ///Inserting in middle
             linkedListclass.InsertInMiddle(30);
             linkedListclass.Display();
-            linkedListclass.DeleteFirstNode();
+            linkedListclass.DeleteLastNode();
             linkedListclass.Display();
             
         }
