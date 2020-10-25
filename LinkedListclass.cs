@@ -126,6 +126,22 @@ namespace DataStructuresDemo
                 }
             }
         }
+        public int Search(T value)
+        {
+            int count = 1;
+            Node<T> temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data.Equals(value))
+                {
+                    Console.WriteLine("\nFound " + value);
+                    return count;
+                }
+                temp = temp.next;
+                count++;
+            }
+            return count;
+        }
     }
 }
 
