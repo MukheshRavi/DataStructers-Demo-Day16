@@ -18,6 +18,12 @@ namespace DataStructuresDemo
             linkedListclass.Display();
             int count = linkedListclass.Size();
             Console.WriteLine("\nsize of list:"+count);
+            OrderedLinkedList<int> orderedLinkedList = new OrderedLinkedList<int>();
+            orderedLinkedList.Add(56);
+            orderedLinkedList.Add(30);
+            orderedLinkedList.Add(40);
+            orderedLinkedList.Add(70);
+            orderedLinkedList.Display();
 
             
             
